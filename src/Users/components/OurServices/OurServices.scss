@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+.OurServices {
+    padding: 1px;
+    padding-top: .6em;
+    .OurServicesHeader {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: "Lora", serif !important;
+        background: #000000be;
+        padding: 8em;
+        background:
+            linear-gradient(rgba(6, 35, 65, 0.835), rgba(6, 37, 68, 0.855)),
+            url(./images/bg.jpg) center center;
+        height: 90%;
+
+        .OurServicesHeading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                font-weight: 800;
+            }
+        }
+    }
+    .OurServicesSecond {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 4em;
+        p {
+            font-size: 21px;
+            font-weight: 500;
+        }
+    }
+    // .OurServicesMarketingServices {
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 1em;
+    //     flex-direction: row-reverse;
+    //     justify-content: space-evenly;
+    //     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    //     .OurServicesMarketingServicesLi {
+    //         .OurServicesMarketingServicesImages {
+    //             img {
+    //                 border-radius: 2em !important;
+    //                 height: auto;
+    //                 max-width: 100%;
+    //                 vertical-align: middle;
+    //             }
+    //         }
+    //         .OurServicesMarketingServicesText {
+    //             span {
+    //                 display: flex;
+    //                 justify-content: center;
+    //             }
+    //             p {
+    //                 font-size: 22px;
+    //                 font-weight: 600;
+    //                 max-width: 20rem;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+.OurServicesBtn {
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    outline: none;
+    border: none;
+    width: 13em;
+    border-radius: 4rem;
+    height: 3em;
+    a {
+        background: transparent;
+        outline: none;
+        border: none;
+    }
+    &:hover , :focus , :active {
+        background-color: #2f4a45;
+        outline: none;
+        border: none;
+        color: white;
+    }
+}
