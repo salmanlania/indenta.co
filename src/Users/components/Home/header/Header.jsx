@@ -55,7 +55,7 @@ export default function Header() {
                         color: 'white',
                         textAlign: 'center',
                         margin: 'auto',
-                        maxWidth: '60rem',
+                        maxWidth: '70rem',
                         fontSize: '4.4rem',
                     }}
                 >
@@ -87,9 +87,8 @@ export default function Header() {
                     justifyContent : 'space-evenly',
                     flexWrap : 'wrap'
                 }}>
-                    {servicesData.map((service, i) => (
+                    {/* {servicesData.map((service, i) => (
                         <Card style={{
-                            // background: 'transparent',
                             borderRadius : '2rem',
                             marginTop: '5rem',
                         }}>
@@ -100,7 +99,7 @@ export default function Header() {
                                 alt="Your Image Alt Text"
                             />
                         </Card>
-                    ))}
+                    ))} */}
                 </Grid>
             </Toolbar>
 

@@ -70,57 +70,67 @@ export default function Navbar(props) {
       </List>
     </Box>
   );
+  const globalStyles = `
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }`;
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar sx={{ justifyContent: 'center' , background : '#23568B' }}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+      <style>{globalStyles}</style>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar component="nav">
+          <Toolbar sx={{ justifyContent: 'center', background: '#23568B' }}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon sx={{ justifyContent: 'flex-start' }} />
+            </IconButton>
+            <Typography variant="h5" component="div">
+              Indenta
+            </Typography>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {navItems.map((item) => (
+                <Button key={item} sx={{ color: '#fff', ml: 2 }} onClick={() => handleNavItemClick(item)}>
+                  {item}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <nav>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true,
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '50%' },
+            }}
           >
-            <MenuIcon sx={{ justifyContent: 'flex-start' }} />
-          </IconButton>
-          <Typography variant="h5" component="div">
-            Indenta
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff', ml: 2 }} onClick={() => handleNavItemClick(item)}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <Box component="main">
-        <Toolbar />
-        {/* Your main content goes here */}
+            {drawer}
+          </Drawer>
+        </nav>
+        <Box component="main">
+          <Toolbar />
+          {/* Your main content goes here */}
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Contact.css'
-import { GetInTouch } from '../../components/Contact/GetInTouch'
+import  GetInTouch  from '../../components/Contact/GetInTouch'
 
 export const Contact = () => {
     useEffect(() => {
