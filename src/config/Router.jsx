@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
-import  Navbar  from "../Users/components/navbar/Navbar";
+// import  Navbar  from "../Users/components/navbar/Navbar";
 import { Home } from '../Users/screens/home/Home'
 import { About } from '../Users/screens/about/About'
 import { Contact } from '../Users/screens/contact/Contact'
-import { Footer } from "../Users/components/Footer/Footer";
+// import { Footer } from "../Users/components/Footer/Footer";
 import { Services } from "../Users/screens/Services/Services";
 import { MarketingServices } from "../Users/screens/MarketingServices/MarketingServices";
 import { ConsumerServices } from "../Users/screens/ConsumerServices/ConsumerServices";
@@ -21,7 +21,19 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
+                path: '/home',
+                element: <Home />,
+            },
+            {
                 path: '/aboutus',
+                element: <About />,
+            },
+            {
+                path: '/about-us',
+                element: <About />,
+            },
+            {
+                path: '/about',
                 element: <About />,
             },
             {
@@ -29,13 +41,17 @@ const router = createBrowserRouter([
                 element: <Contact />,
             },
             {
+                path: '/contactus',
+                element: <Contact />,
+            },
+            {
                 path: '/services',
                 element: <Services />,
             },
-            // {
-            //     path: '/careers',
-            //     element: <Careers />,
-            // },
+            {
+                path: '/service',
+                element: <Services />,
+            },
             {
                 path: '/marketing-services',
                 element: <MarketingServices />,
@@ -63,9 +79,7 @@ function Router() {
 function Main() {
     return (
         <div>
-            <Navbar />
             <Outlet />
-            <Footer />
         </div>
 
     )

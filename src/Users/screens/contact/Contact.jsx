@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Contact.css'
-import  GetInTouch  from '../../components/Contact/GetInTouch'
+import Navbar from '../../components/navbar/Navbar';
+import { Footer } from '../../components/Footer/Footer';
 
 export const Contact = () => {
     useEffect(() => {
@@ -8,7 +9,8 @@ export const Contact = () => {
     }, []);
     return (
         <div className="ContactGet">
-            <GetInTouch />
+            <Navbar />
+            <Footer />
         </div>
     )
 }

@@ -62,7 +62,7 @@ export const Footer = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={4}>
           <Box>
-            <Typography variant='h5'>Contact Us</Typography>
+            <Typography variant='h4'>Contact Us</Typography>
             <List>
               <ListItem sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '1rem' }}>
                 <LocationOnIcon sx={{ color: 'white' }} />
@@ -108,7 +108,7 @@ export const Footer = () => {
       </Grid>
       <Grid container justifyContent="center" spacing={2} sx={{ marginTop: '.5rem', opacity: '0.9' }}>
         <Grid item>
-          <Typography variant='body1' sx={{ fontSize: '0.9rem' }}>&#169; 2007-2022 Quality Contact Solutions, Inc.</Typography>
+          <Typography variant='body1' sx={{ fontSize: '0.9rem' }}>&#169; 2024 Indenta</Typography>
         </Grid>
       </Grid>
     </section>

@@ -8,6 +8,9 @@ import IndentaInfo from '../../components/Home/indentaInfo/indentaInfo';
 import Popular from '../../components/Home/Popular/Popular';
 import Careers from '../../components/Home/Careers/Careers'
 
+import Navbar from '../../components/navbar/Navbar'
+import {Footer} from '../../components/Footer/Footer'
+
 export const Home = () => {
   useEffect(() => {
     document.title = 'Home | Indenta';
@@ -15,6 +18,7 @@ export const Home = () => {
   }, []);
   return (
     <div className='Home'>
+      <Navbar />
       <Header />
       {/* <Popular className='HomePopular'/> */}
       <WhyChooseUs className='WhyChooseUs' />
@@ -22,6 +26,7 @@ export const Home = () => {
       <WhyIndentaDSA />
       <Careers />
       {/* <HomeVideo /> */}
+      <Footer />
     </div>
   )
 }

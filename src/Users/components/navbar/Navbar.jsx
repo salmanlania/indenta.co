@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
@@ -15,13 +16,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Container } from '@mui/material'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About Us', 'Services', 'Industries', 'Articles/Blog', 'Resources'];
+const navItems = ['Home', 'About Us', 'Services', 'Careers', 'Contact Us'];
 
 export default function Navbar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
@@ -33,21 +35,21 @@ export default function Navbar(props) {
       case 'Home':
         navigate('/');
         break;
-      // case 'About Us':
-      //   navigate('/aboutus');
-      //   break;
-      // case 'Services':
-      //   navigate('/services');
-      //   break;
-      // case 'Industries':
-      //   navigate('/industries');
-      //   break;
-      // case 'Articles/Blog':
-      //   navigate('/blog');
-      //   break;
-      // case 'Resources':
-      //   navigate('/resources');
-      //   break;
+      case 'About Us':
+        navigate('/aboutus');
+        break;
+      case 'Services':
+        navigate('/services');
+        break;
+      case 'Careers':
+        navigate('/careers');
+        break;
+      case 'Articles/Blog':
+        navigate('/blog');
+        break;
+      case 'Contact Us':
+        navigate('/Contactus');
+        break;
       default:
         navigate('/');
     }
@@ -96,16 +98,25 @@ export default function Navbar(props) {
             >
               <MenuIcon sx={{ justifyContent: 'flex-start' }} />
             </IconButton>
-            <Typography variant="h5" component="div">
-              Indenta
-            </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff', ml: 2 }} onClick={() => handleNavItemClick(item)}>
-                  {item}
-                </Button>
-              ))}
-            </Box>
+            <Container sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Typography variant="h6" component="div" onClick={() => navigate('/')} sx={{ cursor: 'pointer', display: 'flex',  justifyContent: 'space-evenly', gap: '8px' }}>
+                <Typography variant="h6" component="div" sx={{ fontSize : '17px' }}>
+                  INDENTA
+                </Typography>
+                <Typography variant="h6" component="div" sx={{ fontSize : '17px' , borderRight : '1px solid white'}}>
+                </Typography>
+                <Typography variant="h6" component="div" sx={{ maxWidth: '200px' , fontSize : '17px'}}>
+                  Business Solutions Group
+                </Typography>
+              </Typography>
+              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {navItems.map((item) => (
+                  <Button key={item} sx={{ color: '#fff', ml: 2, fontSize : '12px' }} onClick={() => handleNavItemClick(item)}>
+                    {item}
+                  </Button>
+                ))}
+              </Box>
+            </Container>
           </Toolbar>
         </AppBar>
         <nav>
