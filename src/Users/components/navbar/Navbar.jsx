@@ -88,7 +88,10 @@ export default function Navbar(props) {
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar component="nav">
-          <Toolbar sx={{ justifyContent: 'center', background: '#23568B' }}>
+          <Toolbar sx={{
+            justifyContent: 'center',
+            background: '#23568B',
+          }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -99,19 +102,19 @@ export default function Navbar(props) {
               <MenuIcon sx={{ justifyContent: 'flex-start' }} />
             </IconButton>
             <Container sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Typography variant="h6" component="div" onClick={() => navigate('/')} sx={{ cursor: 'pointer', display: 'flex',  justifyContent: 'space-evenly', gap: '8px' }}>
-                <Typography variant="h6" component="div" sx={{ fontSize : '17px' }}>
+              <Typography variant="h6" component="div" onClick={() => navigate('/')} sx={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-evenly', gap: '8px' }}>
+                <Typography variant="h6" component="div" sx={{ fontSize: '17px' }}>
                   INDENTA
                 </Typography>
-                <Typography variant="h6" component="div" sx={{ fontSize : '17px' , borderRight : '1px solid white'}}>
+                <Typography variant="h6" component="div" sx={{ fontSize: '17px', borderRight: '1px solid white' }}>
                 </Typography>
-                <Typography variant="h6" component="div" sx={{ maxWidth: '200px' , fontSize : '17px'}}>
+                <Typography variant="h6" component="div" sx={{ maxWidth: '200px', fontSize: '17px' }}>
                   Business Solutions Group
                 </Typography>
               </Typography>
-              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Box sx={{ display: { xs: 'none', sm: 'block' }  }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: '#fff', ml: 2, fontSize : '12px' }} onClick={() => handleNavItemClick(item)}>
+                  <Button key={item} sx={{ color: '#fff', ml: 2, fontSize: '14px' , '&:hover': { transform : 'scale(1.1)' , transition : '1s'}}} onClick={() => handleNavItemClick(item)}>
                     {item}
                   </Button>
                 ))}

@@ -96,7 +96,8 @@ export default function WhyChooseUs() {
     }, [index]);
 
     return (
-        <Container maxWidth="xl" style={{ marginTop: '1px', background: '#23568B', padding: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center' , paddingBottom : '4rem'}}>
+        <Container maxWidth="100%" style={{width : '100%' , marginTop: '1px', background: '#23568B', padding: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: '4rem' }}
+        fullwidth>
             <Typography variant="h5" style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 'bold', color: 'white', display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
                 Why Choose Us
             </Typography>
@@ -110,7 +111,8 @@ export default function WhyChooseUs() {
                             overflow: 'hidden',
                             color: 'white',
                             height: '30rem',
-                            maxWidth: '50rem',
+                            maxWidth: '70rem',
+                            padding : '1rem',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -122,10 +124,10 @@ export default function WhyChooseUs() {
                             margin: 'auto', // Center the Paper component
                         }}
                     >
-                        <Typography variant="h5" sx={{ marginBottom: '15px', zIndex: 2 }}>
+                        <Typography variant="h4" sx={{ marginBottom: '15px', zIndex: 2, fontSize : '58px' }}>
                             {carouselData[index].title}
                         </Typography>
-                        <Typography variant="body1" sx={{ zIndex: 2 }}>
+                        <Typography variant="body1" sx={{ zIndex: 2, fontSize : '22px' }}>
                             {carouselData[index].description}
                         </Typography>
                     </Paper>
