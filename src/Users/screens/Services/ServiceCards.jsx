@@ -35,7 +35,7 @@ const listItemMap = [
 
 export default function ServiceCards() {
     return (
-        <section style={{  display: 'flex', flexDirection: 'row-reverse', justifyContent: 'space-between', padding: '4rem', flexWrap: 'wrap' }}>
+        <section style={{  display: 'flex', flexDirection: 'row-reverse', justifyContent: 'space-between', marginTop : '2rem' , marginBottom : '1rem' , flexWrap: 'wrap' }}>
             <Grid container spacing={3}>
                 {printCard.map((card) => (
                     <Grid key={card.Cardtitle} item xs={12} sm={6} md={3}>

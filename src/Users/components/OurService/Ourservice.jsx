@@ -44,7 +44,7 @@ const OurService = () => {
 
     return (
         <Container sx={{ textAlign: 'center', padding: '0 !important', marginRight: '14rem' }}>
-            <Container sx={{marginLeft : '3rem'}}>
+            <Container sx={{ marginLeft: '3rem' }}>
                 {/* MARKETING */}
                 <Paper elevation={3} sx={{ padding: '20px', textAlign: 'center', height: '100%', width: '100%', mb: '2em' }}>
                     <Grid container spacing={2} alignItems="stretch" justifyContent="space-between" sx={{ padding: '20px' }}>

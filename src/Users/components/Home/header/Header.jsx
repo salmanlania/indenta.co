@@ -46,7 +46,7 @@ const servicesData = [
 
 export default function Header() {
     return (
-        <AppBar position="static" style={{ background: `linear-gradient(rgba(6, 35, 65, 0.8), rgba(6, 37, 68, 0.6)), url('${image}') center center`, backgroundSize: 'cover', minHeight: '80vh' }}>
+        <AppBar position="static" style={{ background : 'transparent', backgroundSize: 'cover', minHeight: '80vh' }}>
             <Toolbar sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5rem', gap: '3rem' }}>
                 <Typography
                     variant="h2"

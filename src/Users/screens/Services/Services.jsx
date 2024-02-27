@@ -57,8 +57,8 @@ export const Services = () => {
         </Typography>
       </Paper>
 
-      <Paper elevation={3} sx={{ padding: '20px', textAlign: 'center', height: '100%', width: '100%', mb: '2em' }}>
-        <Grid container spacing={2} alignItems="stretch" justifyContent="space-between" sx={{ padding: '24px' }}>
+      <Paper elevation={3} sx={{ padding: '20px', textAlign: 'center', height: '100%', width: '100%',  }}>
+        <Grid container  alignItems="stretch" justifyContent="space-between" sx={{ padding: '24px' }}>
           {/* Left Side (Image) */}
           <Grid item xs={12} md={6}>
             <img src={bgImageTop} alt="Service Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -78,20 +78,28 @@ export const Services = () => {
         </Grid>
       </Paper>
 
-      <Paper elevation={3} sx={{ mt: 4, textAlign: 'center', width: '100vw', overflow: 'hidden', background: 'linear-gradient(1deg, #44528B 30%, #8E24AA 40%)' }}>
-        <marquee behavior="scroll" direction="left" scrollamount="5">
-          <Typography variant="h5" sx={{ margin: 'auto', color: 'white' }}>
-            Consult our Expert: Book an Appointment Tab (CTA)
-          </Typography>
-        </marquee>
+      <Paper elevation={3} sx={{  textAlign: 'center', width: '100vw', overflow: 'hidden', background: 'linear-gradient(1deg, #44528B 30%, #8E24AA 40%)', height: '3rem', display: 'flex', alignItems: 'center' , height : '4rem'}}>
+        <Typography variant="h4" sx={{ margin: 'auto', color: 'white' }}>
+          Consult our Expert: Book an Appointment Tab (CTA)
+        </Typography>
       </Paper>
-      
+
       <ServiceCards />
+
       <CreditCardBenifits />
+      <Paper elevation={3} sx={{ mt: 4, textAlign: 'center', width: '98.5vw', overflow: 'hidden', background: 'linear-gradient(1deg, #44528B 30%, #8E24AA 40%)', height: '9rem', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent : 'center' , marginBottom: '1rem', gap : '1rem' , padding : '2rem' }}>
+        <Typography variant="body1" sx={{ margin: 'auto', color: 'white', fontSize: '18px' }}>
+          Our suite of products is dedicated to supporting you in achieving your financial
+          objectives, whether it&#39;s basking in the sun during retirement or taking the first step
+          towards your dream home. Indenta DSA is your partner on this journey – where
+          financial goals become reality.
+        </Typography> 
+        <Button variant="contained" color="primary" sx={{background : '#FFBF00' }}>Learn More</Button>
+      </Paper>
 
       {/* <hr /> */}
 
-
+      {/* <OurService /> */}
       <Footer />
     </div>
   )

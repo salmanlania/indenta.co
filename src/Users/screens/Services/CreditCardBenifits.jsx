@@ -8,7 +8,7 @@ import Five from './images/5.png';
 
 const CreditCardBenefits = () => {
   return (
-    <div>
+    <div style={{ marginBottom: '3rem' }}>
       <Paper elevation={3} sx={{ textAlign: 'center', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1, p: 1, background: 'linear-gradient(1deg, #44528B 30%, #8E24AA 40%)' }}>
         <Typography variant="h5" sx={{ color: 'white' }}>
           Benefits of Using a Credit Card
@@ -16,7 +16,7 @@ const CreditCardBenefits = () => {
       </Paper>
       <Container>
 
-        <Grid container spacing={4}>
+        <Grid container >
           <Grid item xs={12} md={6} lg={6}>
             <section sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft: { xs: 0, md: '17rem' }, marginTop: '2rem' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -82,11 +82,7 @@ const CreditCardBenefits = () => {
           </Grid>
         </Grid>
 
-        <Paper elevation={3} sx={{ textAlign: 'center', maxWidth: '1300px', margin: 'auto', my: 2, p: 2, background: '#fff' , marginTop : '3rem'}}>
-        <Typography variant="body1" sx={{ textAlign: 'center' }}>
-          Our suite of products is dedicated to supporting you in achieving your financial objectives, whether it's basking in the sun during retirement or taking the first step towards your dream home. Indenta DSA is your partner on this journey – where financial goals become reality.
-        </Typography>
-      </Paper>
+        
       </Container>
     </div>
   );

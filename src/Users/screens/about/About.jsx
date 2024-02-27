@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './About.css'
-import { OurStory } from '../../components/About/OurStory/OurStory'
+import  OurStory from '../../components/About/OurStory/OurStory'
 import { CoreCompetencies } from '../../components/About/CoreCompetencies/CoreCompetencies'
 // import { motion, useAnimation } from 'framer-motion';
 

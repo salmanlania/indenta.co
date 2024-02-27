@@ -10,6 +10,7 @@ import { MarketingServices } from "../Users/screens/MarketingServices/MarketingS
 import { ConsumerServices } from "../Users/screens/ConsumerServices/ConsumerServices";
 import { CorporateServices } from "../Users/screens/CorporateServices/CorporateServices";
 import {Admin} from '../Admin/Admin'
+import Careers from "../Users/screens/Careers/Careers";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +68,14 @@ const router = createBrowserRouter([
             {
                 path: '/admin',
                 element: <Admin />,
+            },
+            {
+                path: '/careers',
+                element: <Careers />,
+            },
+            {
+                path: '/career',
+                element: <Careers />,
             },
         ]
     }
