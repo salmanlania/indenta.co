@@ -1,109 +1,73 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Paper, Grid, Typography, Container, Button, Card, CardContent, CardMedia, CardActions } from '@mui/material';
-import image from './images/carousel-4.jfif'
+import { Typography, Container } from '@mui/material';
 import TypingEffect from 'react-typing-effect';
+import video from './images/file.mp4';
 
-import creditCard from './images/credit-Card.png'
-import bankingFacilitation from './images/banking-facilitation.png'
-import autoLoan from './images/auto-loan.png'
-import mortgageLoan from './images/mortgage-loan.png'
-import personalLoan from './images/personal-loan.png'
-import smeLoan from './images/sme-loan.png'
-import { FitScreen } from '@mui/icons-material';
+const Header = () => {
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
 
-const servicesData = [
-    {
-        title: 'Credit Card',
-        // image: 'https://via.placeholder.com/150',
-        image: `${creditCard}`
-    },
-    {
-        title: 'Banking Facilitation',
-        // image: 'https://via.placeholder.com/150',
-        image: `${bankingFacilitation}`
-    },
-    {
-        title: 'Personal Loan',
-        // image: 'https://via.placeholder.com/150',
-        image: `${personalLoan}`
-    },
-    {
-        title: 'Auto Loan',
-        // image: 'https://via.placeholder.com/150',
-        image: `${autoLoan}`
-    },
-    {
-        title: 'Mortgage Loan',
-        // image: 'https://via.placeholder.com/150',
-        image: `${mortgageLoan}`
-    },
-    {
-        title: 'SME Loan',
-        // image: 'https://via.placeholder.com/150',
-        image: `${smeLoan}`
-    },
-];
-
-export default function Header() {
-    return (
-        <AppBar position="static" style={{ background : 'transparent', backgroundSize: 'cover', minHeight: '80vh' }}>
-            <Toolbar sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5rem', gap: '3rem' }}>
-                <Typography
-                    variant="h2"
-                    component="div"
-                    sx={{
-                        color: 'white',
-                        textAlign: 'center',
-                        margin: 'auto',
-                        maxWidth: '70rem',
-                        fontSize: '4.4rem',
-                    }}
-                >
-                    Indenta
-                </Typography>
-                <Typography
-                    variant="h4"
-                    component="div"
-                    sx={{
-                        color: 'white',
-                        textAlign: 'center',
-                        margin: 'auto',
-                        maxWidth: '60rem',
-                    }}
-                >
-                    <TypingEffect
-                        text={[
-                            'Indenta DSA is a premier Direct Sales Agency and Consultancy in the heart of the UAE.',
-                        ]}
-                        speed={50}
-                        eraseSpeed={30}
-                    />
-                </Typography>
-                {/* <Typography variant="h5" style={{ fontSize: '2rem', fontWeight: 'bold',  color: 'white' }}>
-                    Popular Services
-                </Typography> */}
-                <Grid container sx={{
-                    display: 'flex',
-                    justifyContent : 'space-evenly',
-                    flexWrap : 'wrap'
-                }}>
-                    {/* {servicesData.map((service, i) => (
-                        <Card style={{
-                            borderRadius : '2rem',
-                            marginTop: '5rem',
-                        }}>
-                            <CardMedia
-                                component="img"
-                                height="100"
-                                image={service.image}
-                                alt="Your Image Alt Text"
-                            />
-                        </Card>
-                    ))} */}
-                </Grid>
-            </Toolbar>
-
-        </AppBar>
-    );
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        preload="auto"
+        playsInline
+        style={{
+          objectFit: 'cover',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+      <Container
+        component="div"
+        style={{
+          position: 'absolute',
+          top: '45%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)', 
+          textAlign: 'center',
+          color: 'white',
+          width: '100%',
+        }}
+      >
+        <Typography
+          variant="h2"
+          style={{
+            marginBottom: '20px',
+            color : 'white',
+            transition: 'opacity 0.5s ease-in-out',
+          }}
+        >
+          Indenta
+        </Typography>
+        <TypingEffect
+          speed={100}
+          eraseSpeed={50}
+          eraseDelay={1500}
+          text={['Indenta DSA is a premier Direct Sales Agency and Consultancy in the heart of the UAE.']}
+          onComplete={() => setIsTypingComplete(true)}
+          style={{
+            fontSize : '2rem'
+          }}
+        />
+      </Container>
+    </div>
+  );
 };
 
+export default Header;

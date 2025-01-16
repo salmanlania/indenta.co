@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
 // import  Navbar  from "../Users/components/navbar/Navbar";
-import { Home } from '../Users/screens/home/Home'
+import  Home  from '../Users/screens/home/Home'
 import { About } from '../Users/screens/about/About'
 import { Contact } from '../Users/screens/contact/Contact'
 // import { Footer } from "../Users/components/Footer/Footer";
